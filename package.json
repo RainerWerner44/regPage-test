@@ -2,13 +2,14 @@
   "name": "my-react-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/RainerWerner44/regPage-test",
+  "homepage": "https://github.com/RainerWerner44/regPage-test.git",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src/**/*.{ts,tsx,js,jsx}",
     "format": "prettier --write src/**/*.{ts,tsx,js,jsx,json,css}",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
