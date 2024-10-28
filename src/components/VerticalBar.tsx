@@ -1,6 +1,6 @@
 import { useRegistration } from '../context/RegistrationContext';
 import { useEffect, useState } from 'react';
-import Checkmark from '../assets/icons/Checkmark.svg';
+import Checkmark from '../assets/icons/CHeckmarkPNG.png';
 import { Steps } from '../utils/steps';
 import { useNavigate } from 'react-router-dom';
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5';
