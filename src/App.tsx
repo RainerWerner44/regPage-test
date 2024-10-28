@@ -12,19 +12,18 @@ import LoginSuccessPage from './pages/LoginSuccessPage';
 import VerticalBar from './components/VerticalBar';
 
 const App = () => {
-
   const location = useLocation();
-
-  console.log(location);
-  
-
 
   return (
     <div className="lg:grid lg:grid-cols-3">
       <div
-          style={{
+        style={{
           background: 'linear-gradient(339.02deg, #0D3251 0%, #19476C 103.05%)',
-          display: location.pathname.includes('/onboard-complete') || location.pathname.includes('/login-success') ? 'none' : 'block',  
+          display:
+            location.pathname.includes('/onboard-complete') ||
+            location.pathname.includes('/login-success')
+              ? 'none'
+              : 'block',
         }}
       >
         <VerticalBar />

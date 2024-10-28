@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { MdOutlineVisibilityOff, MdOutlineVisibility } from 'react-icons/md';
-import { useRegistration } from '../context/RegistrationContext';
 import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
   const [doesUserExist, setDoesUserExist] = useState({
-    email: '',    
+    email: '',
     password: '',
   });
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -20,34 +19,33 @@ const LoginForm = () => {
 
   const validateForm = () => {
     const { email, password } = doesUserExist;
-    
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-      errors.push("Please enter a valid email address.");
+      errors.push('Please enter a valid email address.');
     }
 
     if (password.length <= 4) {
-      errors.push("Password must be more than 4 characters.");
+      errors.push('Password must be more than 4 characters.');
     }
 
     return errors;
   };
 
   const validateUser = () => {
-    if (localStorage.getItem('email') !== doesUserExist.email){
+    if (localStorage.getItem('email') !== doesUserExist.email) {
       errors.push('Email of this user does not exist');
     }
-  
-    if (localStorage.getItem('password') !== doesUserExist.password){
+
+    if (localStorage.getItem('password') !== doesUserExist.password) {
       errors.push('Wrong password');
     }
 
     return errors;
-  }
+  };
 
   const onSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); 
+    event.preventDefault();
 
     const errors = validateForm();
     const authUser = validateUser();
@@ -57,7 +55,7 @@ const LoginForm = () => {
     } else {
       setFormErrors([]);
 
-      navigate("/login-success");    
+      navigate('/login-success');
     }
   };
 
@@ -82,7 +80,7 @@ const LoginForm = () => {
         />
       </div>
 
-      <div className={formErrors.length > 0 ? "mb-4" : "mb-8"}>
+      <div className={formErrors.length > 0 ? 'mb-4' : 'mb-8'}>
         <label
           htmlFor="password"
           className="font-inter text-[12px] font-medium leading-[18px] tracking[-0.01em] text-left text-mainText"

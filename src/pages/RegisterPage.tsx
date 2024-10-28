@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom';
 import RegisterForm from '../components/RegisterForm';
-import { useRegistration } from '../context/RegistrationContext';
 import Header from '../components/Header';
 
 const RegisterPage = () => {

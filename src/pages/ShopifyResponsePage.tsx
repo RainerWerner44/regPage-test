@@ -22,7 +22,7 @@ const ShopifyResponsePage = () => {
   const onDoneClick = () => {
     navigate('/');
     setRegistrationStep(1);
-  }
+  };
 
   return (
     <>
@@ -35,7 +35,7 @@ const ShopifyResponsePage = () => {
             <h2 className="text-[#134267] font-inter text-[16px] font-medium leading-[19.2px] tracking-[-0.02em] text-center">
               Response received
             </h2>
-            <p className='mt-2 text-mainText font-inter text-sm font-normal leading-21 tracking-[-0.01em] text-center'>
+            <p className="mt-2 text-mainText font-inter text-sm font-normal leading-21 tracking-[-0.01em] text-center">
               Thank you for your interest in Chad! We’ll be hard at work
               building integrations to support your platform.
             </p>

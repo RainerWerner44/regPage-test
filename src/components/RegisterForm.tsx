@@ -23,24 +23,24 @@ const RegisterForm = () => {
     const { email, name, password } = newUser;
     let errors = [];
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-      errors.push("Please enter a valid email address.");
+      errors.push('Please enter a valid email address.');
     }
 
     if (name.trim().length < 1) {
-      errors.push("Name must be at least 1 character long.");
+      errors.push('Name must be at least 1 character long.');
     }
 
     if (password.length <= 4) {
-      errors.push("Password must be more than 4 characters.");
+      errors.push('Password must be more than 4 characters.');
     }
 
     return errors;
   };
 
   const onSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); 
+    event.preventDefault();
 
     const errors = validateForm();
 
@@ -98,7 +98,7 @@ const RegisterForm = () => {
         />
       </div>
 
-      <div className={formErrors.length > 0 ? "mb-4" : "mb-8"}>
+      <div className={formErrors.length > 0 ? 'mb-4' : 'mb-8'}>
         <label
           htmlFor="password"
           className="font-inter text-[12px] font-medium leading-[18px] tracking[-0.01em] text-left text-mainText"

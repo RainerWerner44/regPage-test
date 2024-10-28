@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Select, { SingleValue } from 'react-select';
-import { useRegistration } from '../context/RegistrationContext';
 
 const options = [
   { value: 'Zendesk', label: 'Zendesk' },
@@ -46,10 +45,11 @@ const NoGmailContentPage = () => {
   return (
     <div className="mt-8">
       <h2 className="font-inter text-2xl font-semibold leading-7 tracking-tight text-left text-[#134267]">
-      Don’t use Gmail?
+        Don’t use Gmail?
       </h2>
       <p className="mt-2 text-mainText font-inter text-sm font-normal leading-5 tracking-tight text-left">
-      Chad Beta is currently only integrated with Gmail. We’ll send you an email when Chad becomes compatible with your support ticket platform.
+        Chad Beta is currently only integrated with Gmail. We’ll send you an
+        email when Chad becomes compatible with your support ticket platform.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-8">
@@ -85,7 +85,9 @@ const NoGmailContentPage = () => {
       <div className="mt-4 flex justify-center">
         <button
           type="button"
-          onClick={() => {navigate('/gmail')}}
+          onClick={() => {
+            navigate('/gmail');
+          }}
           className="text-center text-[#4F637D] font-inter text-[12px] font-[400] leading-[18px] tracking[-0.01em] bg-transparent border-none cursor-pointer"
         >
           Actually use Gmail? <span className="text-[#32ABF2]">Connect</span>

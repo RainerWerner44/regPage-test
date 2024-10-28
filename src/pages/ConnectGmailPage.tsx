@@ -3,7 +3,6 @@ import { FcCheckmark } from 'react-icons/fc';
 import Loader from '../components/Loader';
 import GoogleIcon from '../assets/icons/GoogleIcon.svg';
 import { useNavigate } from 'react-router-dom';
-import { useRegistration } from '../context/RegistrationContext';
 import Header from '../components/Header';
 
 const ConnectGmailPage = () => {

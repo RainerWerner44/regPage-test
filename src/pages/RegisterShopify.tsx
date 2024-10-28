@@ -3,7 +3,6 @@ import { FcCheckmark } from 'react-icons/fc';
 import Loader from '../components/Loader';
 import NoShopifyContent from '../components/NoShopifyContent';
 import ShopifyConnectedPage from './ShopifyConnectedPage';
-import { useRegistration } from '../context/RegistrationContext';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 

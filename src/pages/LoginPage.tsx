@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Logo from '../assets/icons/ChadLogo.svg';
-import RegisterForm from '../components/RegisterForm';
 import { useNavigate } from 'react-router-dom';
 import { useRegistration } from '../context/RegistrationContext';
 import LoginForm from '../components/LoginForm';

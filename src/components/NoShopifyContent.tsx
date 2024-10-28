@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Select, { SingleValue } from 'react-select';
-import { useRegistration } from '../context/RegistrationContext';
 
 const options = [
   { value: 'woocommerce', label: 'WooCommerce' },

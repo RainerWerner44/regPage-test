@@ -5,13 +5,19 @@ interface RegistrationContextType {
   setRegistrationStep: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const RegistrationContext = createContext<RegistrationContextType | undefined>(undefined);
+const RegistrationContext = createContext<RegistrationContextType | undefined>(
+  undefined
+);
 
-export const RegistrationProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const RegistrationProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
   const [registrationStep, setRegistrationStep] = useState<number>(1);
 
   return (
-    <RegistrationContext.Provider value={{ registrationStep, setRegistrationStep }}>
+    <RegistrationContext.Provider
+      value={{ registrationStep, setRegistrationStep }}
+    >
       {children}
     </RegistrationContext.Provider>
   );
@@ -20,7 +26,9 @@ export const RegistrationProvider: React.FC<{ children: ReactNode }> = ({ childr
 export const useRegistration = (): RegistrationContextType => {
   const context = useContext(RegistrationContext);
   if (!context) {
-    throw new Error('useRegistration must be used within a RegistrationProvider');
+    throw new Error(
+      'useRegistration must be used within a RegistrationProvider'
+    );
   }
   return context;
 };
