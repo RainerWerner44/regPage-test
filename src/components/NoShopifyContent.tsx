@@ -39,13 +39,11 @@ const NoShopifyContent: React.FC<Props> = ({ setConnectShopify }) => {
   const [selectedOption, setSelectedOption] =
     useState<SingleValue<{ value: string; label: string }>>(null);
   const navigate = useNavigate();
-  const { setRegistrationStep } = useRegistration();
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     if (selectedOption) {
       navigate('/shopify-response');
-      setRegistrationStep(0);
     }
   };
 

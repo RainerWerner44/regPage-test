@@ -5,12 +5,12 @@ import NoShopifyContent from '../components/NoShopifyContent';
 import ShopifyConnectedPage from './ShopifyConnectedPage';
 import { useRegistration } from '../context/RegistrationContext';
 import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
 
 const RegisterShopify = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [connectShopify, setConnectShopify] = useState(true);
   const [isShopifyConnected, setIsShopifyConnected] = useState(false);
-  const { setRegistrationStep } = useRegistration();
   const naigate = useNavigate();
 
   useEffect(() => {
@@ -25,7 +25,6 @@ const RegisterShopify = () => {
 
   const onConnectStore = () => {
     setIsShopifyConnected(true);
-    setRegistrationStep(0);
     naigate('/shopify-success');
   };
 
@@ -35,6 +34,7 @@ const RegisterShopify = () => {
         <Loader />
       ) : (
         <>
+          <Header />
           {connectShopify && !isShopifyConnected && (
             <div className="mt-8">
               <h2 className="font-inter text-2xl font-semibold leading-7 tracking-tight text-left text-[#134267]">
@@ -100,7 +100,7 @@ const RegisterShopify = () => {
                 <button
                   type="button"
                   onClick={() => {
-                    setConnectShopify(false);           
+                    setConnectShopify(false);
                   }}
                   className="text-center text-[#4F637D] font-inter text-[12px] font-[400] leading-[18px] tracking[-0.01em] bg-transparent border-none cursor-pointer"
                 >

@@ -4,4 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (min-width: 640px) and (max-width: 1024px) and (orientation: portrait) {
+  .bg-portrait {
+    @apply bg-center bg-cover pt-20; 
+    background-image: url('./assets/images/bg.webp');
+  }
+}
 
+@media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
+  .bg-landscape {
+    @apply bg-center bg-cover pt-12; 
+    background-image: url('./assets/images/bg-landscape.webp');
+  }
+}
+
+@media (min-width: 1025px) {
+  .bg-largeScreen {
+    @apply bg-center bg-cover pt-[132px];
+    background-image: url('./assets/images/bg.webp');
+  }
+}

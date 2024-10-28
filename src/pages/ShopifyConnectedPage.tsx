@@ -35,7 +35,7 @@ const ShopifyConnectedPage = () => {
         <Loader />
       ) : (
         <>
-          <div className='mt-[112px]'>
+          <div className='mt-[112px] lg:mb-[112px]'>
             <img src={Avatar} alt="gigaChadLogo" className='mx-auto' />
             <h2 className='mt-9 text-[#134267] font-inter text-[16px] font-medium leading-[19.2px] tracking-[-0.02em] text-center'>[STORE-NAME] already connected</h2>
             <button
